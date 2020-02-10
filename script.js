@@ -10,6 +10,9 @@ function clock() {
     sec = updateTime(sec);
 
     document.getElementById("currentTime").innerText = hour + " : " + min + " : " + sec;
+    var t = setTimeout(function() {
+        clock();
+    }, 1000);
 };
 
 //Time update function
@@ -21,3 +24,5 @@ function updateTime(i) {
         return i;
     };
 };
+
+clock();
