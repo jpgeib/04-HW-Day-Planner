@@ -21,6 +21,11 @@ body {
     border-bottom: 10px solid black;
   }
 
+  #currentDay {
+    font-size: 16px;
+    font-family: 'Open Sans', sans-serif;
+  }
+
   #currentTime {
       font-size: 16px;
       font-family: 'Open Sans', sans-serif;

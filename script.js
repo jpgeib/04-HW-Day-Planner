@@ -1,10 +1,11 @@
 //Clock function
 
+
 function clock() {
-    var date = new Date();
-    var hour = date.getHours();
-    var min = date.getMinutes();
-    var sec = date.getSeconds();
+    var time = new Date();
+    var hour = time.getHours();
+    var min = time.getMinutes();
+    var sec = time.getSeconds();
     var midday = "AM";
     midday = (hour >= 12) ? "PM" : "AM";
     hour = (hour == 0 ) ? 12 : ((hour > 12) ? (hour - 12): hour);
@@ -12,12 +13,22 @@ function clock() {
     min = updateTime(min);
     sec = updateTime(sec);
 
-    document.getElementById("currentTime").innerText = hour + " : " + min + " : " + sec + " " + midday;
+    var currentTime = document.getElementById("currentTime").innerText = hour + " : " + min + " : " + sec + " " + midday;
     var t = setTimeout(function() {
         clock();
-    }, 1000);
-    
-    
+    }, 1000);   
+};
+
+//Date function
+
+function todaysDate() {
+    var date = new Date();
+    var day = date.getDate();
+    var month = date.getMonth();
+    var year = date.getFullYear();
+
+    document.getElementById("currentDay").innertext = month + "/" + day + "/" + year;
+
 };
 
 //Time update function
@@ -30,4 +41,10 @@ function updateTime(i) {
     };
 };
 
+//Call functions
+
 clock();
+todaysDate();
+
+
+//Local Storage for timeslots
