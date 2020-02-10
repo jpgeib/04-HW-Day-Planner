@@ -1,0 +1,1 @@
+This is a day planner app that saves past, present, and future events to the page. This utilizes html5, css3, and javascript/jquery.
