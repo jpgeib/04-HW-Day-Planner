@@ -26,7 +26,8 @@ function clock() {
     var currentTime = document.getElementById("currentTime").innerText = hour + " : " + min + " : " + sec + " " + midday;
     var t = setTimeout(function() {
         clock();
-    }, 1000);   
+    }, 1000);
+    
 };
 
 //Date function
