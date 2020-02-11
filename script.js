@@ -1,13 +1,14 @@
 //Timeslot DOMs
-const nineAM = document.getElementById("timeslot-9AM");
-const tenAM = document.getElementById("timeslot-10AM");
-const elevenAM = document.getElementById("timeslot-11AM");
-const twelvePM = document.getElementById("timeslot-12PM");
-const onePM = document.getElementById("timeslot-1PM");
-const twoPM = document.getElementById("timeslot-2PM");
-const threePM = document.getElementById("timeslot-3PM");
-const fourPM = document.getElementById("timeslot-4PM");
-const fivePM = document.getElementById("timeslot-5PM");
+const nineAM = document.getElementById("9");
+const tenAM = document.getElementById("10");
+const elevenAM = document.getElementById("11");
+const twelvePM = document.getElementById("12");
+const onePM = document.getElementById("1");
+const twoPM = document.getElementById("2");
+const threePM = document.getElementById("3");
+const fourPM = document.getElementById("4");
+const fivePM = document.getElementById("5");
+const submitBtn = document.getElementsByClassName("btn btn-primary btn-block");
 
 //Clock function
 
@@ -51,6 +52,14 @@ function updateTime(i) {
         return i;
     };
 };
+//Local Storage for timeslots
+function saveInput() {
+    if(typeof(Storage) !== "undefined") {
+
+    }
+}
+
+//Time 
 
 //Call functions
 
@@ -58,4 +67,4 @@ clock();
 todaysDate();
 
 
-//Local Storage for timeslots
+//Event Listeners
