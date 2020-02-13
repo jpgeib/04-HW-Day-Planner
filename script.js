@@ -98,7 +98,7 @@ $(document).ready(function() {
     $("#hour-3 .appointment-block").val(localStorage.getItem("hour-3"));
     $("#hour-4 .appointment-block").val(localStorage.getItem("hour-4"));
     $("#hour-5 .appointment-block").val(localStorage.getItem("hour-5"));
-})
+});
 
 
 
