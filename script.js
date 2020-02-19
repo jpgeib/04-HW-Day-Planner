@@ -82,22 +82,24 @@ function hourUpdater() {
 //Local Storage
 
 $(".saveButton").on("click", function() {
-    var value = $(this).siblings(".appointment-block").val();
-    var timeSlot = $(this).parent().attr("id");
-
-    localStorage.setItem(timeSlot, value);
+    var timeSlot = $(this).attr("id").split("-")[1];
+    var value = "#hour-" + timeSlot;
+    var descrip = $(value).val();
+    value = value.replace(/^#/, "");
+    console.log(descrip, timeSlot);
+    localStorage.setItem(value, descrip);
 });
 
 $(document).ready(function() {
-    $("#hour-9 .appointment-block").val(localStorage.getItem("hour-9"));
-    $("#hour-10 .appointment-block").val(localStorage.getItem("hour-10"));
-    $("#hour-11 .appointment-block").val(localStorage.getItem("hour-11"));
-    $("#hour-12 .appointment-block").val(localStorage.getItem("hour-12"));
-    $("#hour-1 .appointment-block").val(localStorage.getItem("hour-1"));
-    $("#hour-2 .appointment-block").val(localStorage.getItem("hour-2"));
-    $("#hour-3 .appointment-block").val(localStorage.getItem("hour-3"));
-    $("#hour-4 .appointment-block").val(localStorage.getItem("hour-4"));
-    $("#hour-5 .appointment-block").val(localStorage.getItem("hour-5"));
+    $("#hour-9").val(localStorage.getItem("hour-9"));
+    $("#hour-10").val(localStorage.getItem("hour-10"));
+    $("#hour-11").val(localStorage.getItem("hour-11"));
+    $("#hour-12").val(localStorage.getItem("hour-12"));
+    $("#hour-1").val(localStorage.getItem("hour-1"));
+    $("#hour-2").val(localStorage.getItem("hour-2"));
+    $("#hour-3").val(localStorage.getItem("hour-3"));
+    $("#hour-4").val(localStorage.getItem("hour-4"));
+    $("#hour-5").val(localStorage.getItem("hour-5"));
 });
 
 
