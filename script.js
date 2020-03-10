@@ -43,6 +43,8 @@ function todaysDate() {
 
 };
 
+$("#currentDay").text(moment().format('MMMM Do' + ',' + ' YYYY'));
+
 //Time update function
 
 function updateTime(i) {
